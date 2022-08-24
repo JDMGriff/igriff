@@ -1,0 +1,24 @@
+body {
+    background-color: #1f2228;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.container p {
+    color: white;
+}
+.heading {
+    color: white;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+.nav-link-item {
+    padding-right: 2rem;
+}
+.nav-link-text {
+    color: white;
+}
