@@ -1,23 +1,26 @@
 {
-  "name": "igriff",
-  "version": "1.0.0",
-  "private": true,
-  "description": "igriff",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "gatsby": "^4.21.1",
-    "gatsby-plugin-sass": "^5.21.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "sass": "^1.54.5"
-  }
+    "name": "igriff",
+    "version": "1.0.0",
+    "private": true,
+    "description": "igriff",
+    "keywords": [
+        "gatsby"
+    ],
+    "scripts": {
+        "develop": "gatsby develop",
+        "start": "gatsby develop",
+        "build": "gatsby build",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean"
+    },
+    "dependencies": {
+        "gatsby": "^4.21.1",
+        "gatsby-plugin-sass": "^5.21.0",
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0",
+        "sass": "^1.54.5"
+    },
+    "resolutions": {
+        "ansi-html": "https://registry.npmjs.org/ansi-html-community/-/ansi-html-community-0.0.8.tgz"
+    }
 }

@@ -1,0 +1,11 @@
+.navLinks {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 24px;
+
+    &__text {
+        color: white;
+    }
+}
