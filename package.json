@@ -27,5 +27,8 @@
         "react": "^18.1.0",
         "react-dom": "^18.1.0",
         "sass": "^1.54.5"
+    },
+    "resolutions": {
+        "ansi-html": "https://registry.npmjs.org/ansi-html-community/-/ansi-html-community-0.0.8.tgz"
     }
 }
