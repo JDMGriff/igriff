@@ -4,8 +4,9 @@ module.exports = {
         title: 'Ian Griffiths - Full Stack Developer',
     },
     plugins: [
-        'gatsby-plugin-image',
         'gatsby-plugin-sharp',
+        "gatsby-transformer-sharp",                
+        'gatsby-plugin-image',
         `gatsby-plugin-sass`,
         {
             resolve: 'gatsby-source-filesystem',
