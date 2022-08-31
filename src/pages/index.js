@@ -1,47 +1,22 @@
 // Step 1: Import React
 import * as React from 'react';
-import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
-import { StaticImage } from 'gatsby-plugin-image';
 import Seo from '../components/seo';
+import BlogList from '../components/BlogList';
+import Hero from '../components/Hero';
 
 // Step 2: Define your component
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
     return (
         <Layout pageTitle='Home Page'>
-            <p>I'm making this by following the Gatsby Tutorial.</p>
-            <StaticImage alt='image' src='../images/game-over.jpg' />
+            {/* Include Hero section */}
+            <Hero />
 
-            {/* Include latest blogs - refactor to be component */}
-            <h2>Blog Posts</h2>
-            {data.allMdx.nodes.map((node) => (
-                <article key={node.id}>
-                    <h2>
-                        <Link to={`/blog/${node.frontmatter.slug}`}>
-                            {node.frontmatter.title}
-                        </Link>
-                    </h2>
-                    <p>Posted: {node.frontmatter.date}</p>
-                </article>
-            ))}
+            {/* Include latest blogs */}
+            <BlogList />
         </Layout>
     );
 };
-
-export const query = graphql`
-    query {
-        allMdx(sort: { fields: frontmatter___date, order: DESC }) {
-            nodes {
-                frontmatter {
-                    date(formatString: "MMMM D, YYYY")
-                    title
-                    slug
-                }
-                id
-            }
-        }
-    }
-`;
 
 export const Head = () => (
     <>

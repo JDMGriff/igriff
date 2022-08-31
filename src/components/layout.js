@@ -1,17 +1,8 @@
 import * as React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
-import '../css/styles.css';
+import { Link } from 'gatsby';
+import '../styles/css/styles.css';
 
-const Layout = ({ pageTitle, children }) => {
-    const data = useStaticQuery(graphql`
-        query {
-            site {
-                siteMetadata {
-                    title
-                }
-            }
-        }
-    `);
+const Layout = ({ children }) => {
     return (
         <div>
             <div className='sidebar'>
@@ -66,33 +57,51 @@ const Layout = ({ pageTitle, children }) => {
                     </svg>
                 </div>
             </div>
+            <nav>
+                <div className='nav-logo'>
+                    <Link to='/'>I.G</Link>
+                </div>
+                <ul className='navLinks'>
+                    <li className='navLinks__item'>
+                        <Link
+                            to='/'
+                            className='navLinks__text'
+                            activeClassName='navLinks__item--active'
+                        >
+                            Home
+                        </Link>
+                    </li>
+                    <li className='navLinks__item'>
+                        <Link
+                            to='#about'
+                            className='navLinks__text'
+                            activeClassName='navLinks__item--active'
+                        >
+                            About
+                        </Link>
+                    </li>
+                    <li className='navLinks__item'>
+                        <Link
+                            to='/latest-work'
+                            className='navLinks__text'
+                            activeClassName='navLinks__item--active'
+                        >
+                            Latest Work
+                        </Link>
+                    </li>
+                    <li className='navLinks__item'>
+                        <Link
+                            to='/contact'
+                            className='navLinks__text'
+                            activeClassName='navLinks__item--active'
+                        >
+                            contact
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
             <div className='container'>
-                <header className='site-header'>
-                    {data.site.siteMetadata.title}
-                </header>
-                <nav>
-                    <ul className='navLinks'>
-                        <li className='navLinks__item'>
-                            <Link to='/' className='navLinks__text'>
-                                Home
-                            </Link>
-                        </li>
-                        <li className='navLinks__item'>
-                            <Link to='/about' className='navLinks__text'>
-                                About
-                            </Link>
-                        </li>
-                        <li className='navLinks__item'>
-                            <Link to='/blog' className='navLinks__text'>
-                                Blog
-                            </Link>
-                        </li>
-                    </ul>
-                </nav>
-                <main>
-                    <h1 className='heading'>{pageTitle}</h1>
-                    {children}
-                </main>
+                <main>{children}</main>
             </div>
         </div>
     );

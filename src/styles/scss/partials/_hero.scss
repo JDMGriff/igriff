@@ -1,0 +1,98 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    // Hero title styles
+    &__title {
+        width: 62%;
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            color: $off-white;
+            margin: 0 0 1.5rem 0;
+
+            // Responsive styles
+            @media only screen and (max-width: 992px) {
+                font-size: 3rem;
+            }
+
+            .yellow-period {
+                color: $yellow;
+            }
+        }
+        // Responsive styles
+        @media only screen and (max-width: 992px) {
+            width: 100%;
+        }
+    }
+    // Hero intro text
+    &__intro {
+        font-size: 0.875rem;
+        line-height: 2rem;
+        margin: 0 0 1.5rem 0;
+
+        &--link {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $yellow;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                span {
+                    transition: all 0.2s ease-in-out;
+                    margin-left: 32px;
+                }
+            }
+
+            span {
+                margin-left: 16px;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+    // Bottom Hero items
+    &__sub-items {
+        display: flex;
+        position: absolute;
+        bottom: 40px;
+
+        &--item {
+            padding: 0 24px;
+            border-right: 1px solid #3e4146;
+            font-size: 0.875rem;
+            a {
+                color: $off-white;
+                text-decoration: none;
+                padding-bottom: 5px;
+                border-bottom: 1px dashed $yellow;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    color: $yellow;
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+
+            span {
+                display: inline-block;
+                font-weight: bold;
+                font-size: 1.25rem;
+                margin-bottom: 0.5rem;
+            }
+
+            &:first-of-type {
+                padding-left: 0;
+            }
+            &:last-of-type {
+                padding-right: 0;
+                border-right: none;
+            }
+        }
+    }
+}
