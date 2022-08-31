@@ -4,7 +4,7 @@
 
 ## 🚀 Quick start
 
-1.  **Run Site**
+1.  **Initialize dependencies**
 
     Pull down files then initialize npm from root.
 
