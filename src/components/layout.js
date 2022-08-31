@@ -4,7 +4,7 @@ import '../styles/css/styles.css';
 
 const Layout = ({ children }) => {
     return (
-        <div>
+        <div className='page-wrapper'>
             <div className='sidebar'>
                 <div className='sidebar__logo'>
                     <Link to='/'>I.G</Link>
@@ -100,8 +100,10 @@ const Layout = ({ children }) => {
                     </li>
                 </ul>
             </nav>
-            <div className='container'>
-                <main>{children}</main>
+            <div className='page-wrapper-inner'>
+                <div className='container'>
+                    <main>{children}</main>
+                </div>
             </div>
         </div>
     );

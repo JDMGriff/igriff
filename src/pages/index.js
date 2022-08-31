@@ -4,23 +4,33 @@ import Layout from '../components/layout';
 import Seo from '../components/seo';
 import BlogList from '../components/BlogList';
 import Hero from '../components/Hero';
+import About from '../components/About';
 
 // Step 2: Define your component
 const IndexPage = () => {
     return (
-        <Layout pageTitle='Home Page'>
-            {/* Include Hero section */}
-            <Hero />
+        <div>
+            <Layout pageTitle='Home Page'>
+                {/* Include Hero section */}
+                <Hero />
 
-            {/* Include latest blogs */}
-            <BlogList />
-        </Layout>
+                {/* Include about section */}
+                <About />
+
+                {/* Include latest blogs */}
+                <BlogList />
+            </Layout>
+            {/* Download CV */}
+            <div className='hero__download'>
+                <a href='#about'>Download CV</a>
+            </div>
+        </div>
     );
 };
 
 export const Head = () => (
     <>
-        <Seo title='Home Page' />
+        <Seo title='Home Page | Ian Griffiths' />
         <meta name='Home Page' content='home page' />
     </>
 );

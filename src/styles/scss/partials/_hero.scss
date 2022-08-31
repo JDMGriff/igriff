@@ -1,11 +1,15 @@
 .hero {
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 80px);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    // Lift hero content slightly
+    &__content {
+        margin-top: -80px;
+    }
     // Hero title styles
     &__title {
         width: 62%;
@@ -82,7 +86,7 @@
             span {
                 display: inline-block;
                 font-weight: bold;
-                font-size: 1.25rem;
+                font-size: 1rem;
                 margin-bottom: 0.5rem;
             }
 
@@ -92,6 +96,38 @@
             &:last-of-type {
                 padding-right: 0;
                 border-right: none;
+            }
+        }
+    }
+    // Download CV link
+    &__download {
+        display: inline-block;
+        position: absolute;
+        bottom: 40px;
+        right: 30px;
+        a {
+            color: $yellow;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 1rem;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                height: 2px;
+                width: 24px;
+                background: $yellow;
+                margin-left: 16px;
+                position: relative;
+                top: -5px;
+                transition: all 0.2s ease-in-out;
+            }
+
+            &:hover {
+                &::after {
+                    width: 0;
+                }
             }
         }
     }

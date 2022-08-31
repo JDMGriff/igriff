@@ -3,12 +3,16 @@
 * {
     box-sizing: border-box;
     outline: none;
+    scroll-behavior: smooth;
 }
 body {
     background-color: $primary;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: $off-white;
+}
+.page-wrapper-inner {
+    padding-top: 80px;
 }
 .container {
     max-width: 1400px;

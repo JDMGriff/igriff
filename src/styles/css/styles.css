@@ -2,6 +2,7 @@
 * {
   box-sizing: border-box;
   outline: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -9,6 +10,10 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #eeeeee;
+}
+
+.page-wrapper-inner {
+  padding-top: 80px;
 }
 
 .container {
@@ -119,12 +124,15 @@ nav .nav-logo a {
 
 .hero {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 80px);
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+.hero__content {
+  margin-top: -80px;
 }
 .hero__title {
   width: 62%;
@@ -193,7 +201,7 @@ nav .nav-logo a {
 .hero__sub-items--item span {
   display: inline-block;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 .hero__sub-items--item:first-of-type {
@@ -202,6 +210,75 @@ nav .nav-logo a {
 .hero__sub-items--item:last-of-type {
   padding-right: 0;
   border-right: none;
+}
+.hero__download {
+  display: inline-block;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+}
+.hero__download a {
+  color: #fdcd18;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.hero__download a::after {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 24px;
+  background: #fdcd18;
+  margin-left: 16px;
+  position: relative;
+  top: -5px;
+  transition: all 0.2s ease-in-out;
+}
+.hero__download a:hover::after {
+  width: 0;
+}
+
+.about-section {
+  padding: 120px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-section__title {
+  width: 30%;
+}
+.about-section__title h2 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  line-height: 5rem;
+}
+.about-section__content {
+  width: 70%;
+}
+.about-section__content p {
+  line-height: 1.75rem;
+  margin: 0 0 16px 0;
+}
+.about-section__content a {
+  color: #fdcd18;
+  font-size: 0.875rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+.about-section__content a svg {
+  margin-left: 16px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+.about-section__content a:hover {
+  transition: all 0.2s ease-in-out;
+}
+.about-section__content a:hover svg {
+  transition: all 0.2s ease-in-out;
+  transform: translate(0, -10px);
 }
 
 /*# sourceMappingURL=styles.css.map */
