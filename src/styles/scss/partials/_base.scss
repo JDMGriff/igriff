@@ -15,7 +15,8 @@ body {
     padding-top: 80px;
 }
 .container {
-    max-width: 1400px;
+    width: 100%;
+    max-width: 75%;
     margin: 0 auto;
 
     .heading {
@@ -26,11 +27,25 @@ body {
         color: $off-white;
     }
     // Responsive styles
-    @media only screen and (max-width: 1720px) {
-        padding-left: 175px;
+    @media only screen and (max-width: 1400px) {
+        max-width: 1320px;
+        padding: 0 60px 0 175px;
     }
+
+    @media only screen and (max-width: 1200px) {
+        max-width: 1140px;
+    }
+
     @media only screen and (max-width: 992px) {
+        max-width: 960px;
         padding: 0 30px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        max-width: 720px;
+    }
+    @media only screen and (max-width: 576px) {
+        max-width: 540px;
     }
 }
 .sidebar {

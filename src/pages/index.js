@@ -5,6 +5,7 @@ import Seo from '../components/seo';
 import BlogList from '../components/BlogList';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import XpCard from '../components/XpCard';
 
 // Step 2: Define your component
 const IndexPage = () => {
@@ -16,6 +17,13 @@ const IndexPage = () => {
 
                 {/* Include about section */}
                 <About />
+
+                {/* Include experience section */}
+                <XpCard
+                    companyName='Test'
+                    descrp='test desc'
+                    dateFromTo='date'
+                />
 
                 {/* Include latest blogs */}
                 <BlogList />

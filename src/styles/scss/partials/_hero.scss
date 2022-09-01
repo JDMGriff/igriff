@@ -19,13 +19,17 @@
             color: $off-white;
             margin: 0 0 1.5rem 0;
 
+            .yellow-period {
+                color: $yellow;
+            }
+
             // Responsive styles
             @media only screen and (max-width: 992px) {
                 font-size: 3rem;
             }
 
-            .yellow-period {
-                color: $yellow;
+            @media only screen and (max-width: 576px) {
+                font-size: 2.25rem;
             }
         }
         // Responsive styles
@@ -98,19 +102,22 @@
                 border-right: none;
             }
         }
+        @media only screen and (max-width: 762px) {
+            display: none;
+        }
     }
     // Download CV link
     &__download {
         display: inline-block;
         position: absolute;
-        bottom: 40px;
+        bottom: 48px;
         right: 30px;
         a {
             color: $yellow;
             font-weight: bold;
             text-transform: uppercase;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 0.875rem;
 
             &::after {
                 content: '';
@@ -129,6 +136,9 @@
                     width: 0;
                 }
             }
+        }
+        @media only screen and (max-width: 762px) {
+            display: none;
         }
     }
 }

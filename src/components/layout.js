@@ -3,6 +3,8 @@ import { Link } from 'gatsby';
 import '../styles/css/styles.css';
 
 const Layout = ({ children }) => {
+    const [show, setShow] = React.useState();
+
     return (
         <div className='page-wrapper'>
             <div className='sidebar'>
@@ -61,7 +63,7 @@ const Layout = ({ children }) => {
                 <div className='nav-logo'>
                     <Link to='/'>I.G</Link>
                 </div>
-                <ul className='navLinks'>
+                <ul className={show ? 'navLinks show' : 'navLinks'}>
                     <li className='navLinks__item'>
                         <Link
                             to='/'
@@ -99,6 +101,51 @@ const Layout = ({ children }) => {
                         </Link>
                     </li>
                 </ul>
+                {/* Mobile Toggle Icon */}
+                <div
+                    onClick={() => setShow(!show)}
+                    onKeyDown={() => setShow(!show)}
+                    role='presentation'
+                    className='mobile-toggle'
+                >
+                    <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='30'
+                        height='18'
+                        viewBox='0 0 30 18'
+                    >
+                        <g
+                            id='Group_24'
+                            data-name='Group 24'
+                            transform='translate(-134 -44)'
+                        >
+                            <rect
+                                id='Rectangle_107'
+                                data-name='Rectangle 107'
+                                width='30'
+                                height='2'
+                                transform='translate(134 44)'
+                                fill='#fff'
+                            ></rect>
+                            <rect
+                                id='Rectangle_108'
+                                data-name='Rectangle 108'
+                                width='30'
+                                height='2'
+                                transform='translate(134 52)'
+                                fill='#fff'
+                            ></rect>
+                            <rect
+                                id='Rectangle_109'
+                                data-name='Rectangle 109'
+                                width='20'
+                                height='2'
+                                transform='translate(144 60)'
+                                fill='#fff'
+                            ></rect>
+                        </g>
+                    </svg>
+                </div>
             </nav>
             <div className='page-wrapper-inner'>
                 <div className='container'>
