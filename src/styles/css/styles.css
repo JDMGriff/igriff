@@ -382,6 +382,12 @@ nav .nav-logo a {
   background: #2a2c31;
   padding: 40px;
 }
+.xpcard:hover {
+  cursor: grab;
+}
+.xpcard:active {
+  cursor: grabbing;
+}
 .xpcard h4 {
   margin: 0 0 16px 0;
   font-size: 1.25rem;
@@ -409,6 +415,97 @@ nav .nav-logo a {
 }
 .glide__arrow--left {
   margin-right: 24px;
+}
+
+.skillset {
+  padding-bottom: 120px;
+}
+.skillset h4 {
+  font-size: 1.75rem;
+}
+.skillset__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.skillset__item {
+  width: 32%;
+}
+.skillset__item p {
+  margin: 0 0 12px 0;
+}
+@media only screen and (max-width: 992px) {
+  .skillset__item {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 762px) {
+  .skillset__item {
+    width: 100%;
+  }
+}
+.skillset__bar {
+  display: inline-block;
+  width: 100%;
+  border-radius: 100px;
+  height: 8px;
+  background-color: #2a2c31;
+  position: relative;
+}
+.skillset__bar::before {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 75%;
+  border-radius: 100px 0 0 100px;
+  background-color: #fdcd18;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.skillset__bar--xd {
+  margin-bottom: 32px;
+}
+.skillset__bar--xd::before {
+  content: "";
+  width: 75%;
+}
+.skillset__bar--ps {
+  margin-bottom: 32px;
+}
+.skillset__bar--ps::before {
+  content: "";
+  width: 50%;
+}
+.skillset__bar--css {
+  margin-bottom: 32px;
+}
+.skillset__bar--css::before {
+  content: "";
+  width: 65%;
+}
+.skillset__bar--ai::before {
+  content: "";
+  width: 60%;
+}
+@media only screen and (max-width: 992px) {
+  .skillset__bar--ai {
+    margin-bottom: 32px;
+  }
+}
+.skillset__bar--html::before {
+  content: "";
+  width: 75%;
+}
+@media only screen and (max-width: 762px) {
+  .skillset__bar--html {
+    margin-bottom: 32px;
+  }
+}
+.skillset__bar--js::before {
+  content: "";
+  width: 50%;
 }
 
 .glide {

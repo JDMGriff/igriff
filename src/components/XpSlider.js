@@ -3,9 +3,9 @@ import Glide from '@glidejs/glide';
 import XpCard from '../components/XpCard';
 
 const sliderConfiguration = {
-    type: "slider",
+    type: 'slider',
     startAt: 0,
-    animationTimingFunc: "ease-in-out",
+    animationTimingFunc: 'ease-in-out',
     gap: 30,
     perView: 3,
     breakpoints: {
@@ -14,16 +14,16 @@ const sliderConfiguration = {
         },
         1100: {
             perView: 1,
-        }
-    }
-  };
+        },
+    },
+};
 
 const XpSlider = () => {
     const ref = React.useRef();
 
     React.useEffect(() => {
-      const slider = new Glide(ref.current, sliderConfiguration);
-      slider.mount();
+        const slider = new Glide(ref.current, sliderConfiguration);
+        slider.mount();
     }, [ref]);
 
     return (

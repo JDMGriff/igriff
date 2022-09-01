@@ -9,6 +9,13 @@
     background: $primary-light;
     padding: 40px;
 
+    &:hover {
+        cursor: grab;
+    }
+    &:active {
+        cursor: grabbing;
+    }
+
     h4 {
         margin: 0 0 16px 0;
         font-size: 1.25rem;

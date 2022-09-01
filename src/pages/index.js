@@ -6,6 +6,7 @@ import BlogList from '../components/BlogList';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import XpSlider from '../components/XpSlider';
+import Skillset from '../components/Skillset';
 
 // Step 2: Define your component
 const IndexPage = () => {
@@ -20,6 +21,9 @@ const IndexPage = () => {
 
                 {/* Include experience section */}
                 <XpSlider />
+
+                {/* Include skillset section */}
+                <Skillset />
 
                 {/* Include latest blogs */}
                 <BlogList />
