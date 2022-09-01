@@ -2,9 +2,8 @@ import * as React from 'react';
 
 const XpCard = ({ companyName, descrp, dateFromTo }) => {
     return (
-        <div>
-            <p>XP Card:</p>
-            <p>{companyName}</p>
+        <div className='xpcard'>
+            <h4>{companyName}</h4>
             <p>{descrp}</p>
             <p>{dateFromTo}</p>
         </div>

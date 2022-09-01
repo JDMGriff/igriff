@@ -1,0 +1,45 @@
+.experience {
+    padding-bottom: 120px;
+
+    h2.sectionTitle {
+        font-size: 1.75rem;
+    }
+}
+.xpcard {
+    background: $primary-light;
+    padding: 40px;
+
+    h4 {
+        margin: 0 0 16px 0;
+        font-size: 1.25rem;
+    }
+
+    p {
+        margin: 0 0 16px 0;
+
+        &:last-of-type {
+            color: $yellow;
+            margin: 0;
+        }
+    }
+}
+.glide {
+    &__arrows {
+        position: absolute;
+        right: 0;
+        top: -48px;
+    }
+    &__arrow {
+        background: transparent;
+        border: none;
+        padding: 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &--left {
+            margin-right: 24px;
+        }
+    }
+}
