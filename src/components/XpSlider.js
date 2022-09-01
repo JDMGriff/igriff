@@ -1,35 +1,36 @@
 import * as React from 'react';
-import { useEffect } from 'react';
 import Glide from '@glidejs/glide';
 import XpCard from '../components/XpCard';
 
+const sliderConfiguration = {
+    type: "slider",
+    startAt: 0,
+    animationTimingFunc: "ease-in-out",
+    gap: 30,
+    perView: 3,
+    breakpoints: {
+        1600: {
+            perView: 2,
+        },
+        1100: {
+            perView: 1,
+        }
+    }
+  };
+
 const XpSlider = () => {
-    useEffect(() => {
-        // eslint-disable-next-line no-unused-vars
-        window.addEventListener('load', (event) => {
-            new Glide('.glide', {
-                gap: 30,
-                focusAt: 0,
-                perView: 3,
-                type: 'slider',
-                breakpoints: {
-                    1600: {
-                        perView: 2,
-                    },
-                    1100: {
-                        perView: 1,
-                        focusAt: 0,
-                    },
-                },
-            }).mount();
-        });
-    }, []);
+    const ref = React.useRef();
+
+    React.useEffect(() => {
+      const slider = new Glide(ref.current, sliderConfiguration);
+      slider.mount();
+    }, [ref]);
 
     return (
         <div className='experience' id='experience'>
             <h2 className='sectionTitle'>Experience:</h2>
 
-            <div className='glide'>
+            <div ref={ref} className='glide'>
                 <div className='glide__arrows' data-glide-el='controls'>
                     <button
                         type='button'
