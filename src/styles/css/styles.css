@@ -10,6 +10,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #eeeeee;
+  margin: 0;
 }
 
 .page-wrapper-inner {
@@ -506,6 +507,49 @@ nav .nav-logo a {
 .skillset__bar--js::before {
   content: "";
   width: 50%;
+}
+
+.latest-work-item__hero {
+  height: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+.latest-work-item__hero h1 {
+  font-size: 4rem;
+}
+.latest-work-item__hero--details {
+  display: flex;
+  align-items: center;
+}
+.latest-work-item__hero--details p {
+  font-weight: bold;
+}
+.latest-work-item__hero--details p:first-of-type {
+  margin-right: 40px;
+}
+.latest-work-item__hero--details .xd-icon {
+  background: #470137;
+  border-radius: 100px;
+  color: #f170f4;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-left: 16px;
+}
+.latest-work-item__hero--details .live-status {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 100px;
+  background-color: green;
+  margin: 0 8px;
+}
+
+.job-summary {
+  background-color: #2a2c31;
+  padding: 80px 0;
 }
 
 .glide {
